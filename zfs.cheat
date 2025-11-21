@@ -1,0 +1,12 @@
+% zfs
+
+# list zfs snapshots
+zfs list -t snapshot
+
+# list zfs datasets
+zfs list
+
+# zfs list snapshot usage for dataset
+zfs list -t snapshot -o name,used,refer <datasets>
+
+$ datasets: zfs list -o name | tail -n +2 
