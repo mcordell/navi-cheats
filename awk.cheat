@@ -1,0 +1,4 @@
+% awk
+
+# print column number
+awk '{print $<column>}'
