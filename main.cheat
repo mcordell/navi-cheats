@@ -7,7 +7,7 @@ echo UPDATESTARTUPTTY | gpg-connect-agent
 aws codecommit create-repository --repository-name <repo_name> --repository-description "<repo_description>" | jq '.repositoryMetadata.cloneUrlSsh' | xargs git remote add amazon
 
 # open cheat sheet for editing
-fd . "$(navi info cheats-path)" | fzf | xargs -I {} nvim "{}"
+fd '.*.cheat' "/Users/michael/Code/cheatsheets/navi-cheats/" | fzf | xargs -I {} nvim "{}"
 
 # preview files
 fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' --multi
