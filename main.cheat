@@ -23,3 +23,6 @@ xargs -d $'\n'
 
 # show most common commands (zsh history with zsh-histdb)
 histdb-top
+
+# force sync pi
+ssh pi ./nebula-sync run --env-file .env
